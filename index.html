@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dribbble</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Page 1 -->
+  <div id="page1" class="page">
+    <header>
+      <img src="dribble_logo.png" alt="Dribbble Logo">
+    </header>
+    <main>
+      <h1>What brings you to Dribbble?</h1>
+      <p>Select the options that best describe you. Don't worry, you can explore other options later.</p>
+      <div class="option-container">
+        <div class="option">
+          <img src="designer_icon.png" alt="Designer Icon">
+          <p>I'm a designer looking to share my work</p>
+        </div>
+        <div class="option">
+          <img src="hire_designer_icon.png" alt="Hire Designer Icon">
+          <p>I'm looking to hire a designer</p>
+        </div>
+        <div class="option">
+          <img src="design_inspiration_icon.png" alt="Design Inspiration Icon">
+          <p>I'm looking for design inspiration</p>
+        </div>
+      </div>
+      <div class="button-container">
+        <button onclick="navigateToPage2()">Finish</button>
+        <button>or Press RETURN</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- Page 2 -->
+  <div id="page2" class="page hidden">
+    <header>
+      <img src="dribble_logo.png" alt="Dribbble Logo">
+    </header>
+    <main>
+      <h1>What brings you to Dribbble?</h1>
+      <p>Select the options that best describe you. Don't worry, you can explore other options later.</p>
+      <div class="option-container">
+        <div class="option">
+          <img src="designer_icon.png" alt="Designer Icon">
+          <p>I'm a designer looking to share my work</p>
+        </div>
+        <div class="option">
+          <img src="hire_designer_icon.png" alt="Hire Designer Icon">
+          <p>I'm looking to hire a designer</p>
+        </div>
+        <div class="option">
+          <img src="design_inspiration_icon.png" alt="Design Inspiration Icon">
+          <p>I'm looking for design inspiration</p>
+        </div>
+      </div>
+      <div class="button-container">
+        <button onclick="navigateToPage3()">Finish</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- Page 3 -->
+  <div id="page3" class="page hidden">
+    <header>
+      <img src="dribble_logo.png" alt="Dribbble Logo">
+    </header>
+    <main>
+      <h1>Welcome! Let's create your profile</h1>
+      <p>Let others get to know you better! You can do these later</p>
+      <h2>Add an avatar</h2>
+      <div class="avatar-container">
+        <img src="avatar.png" alt="Avatar">
+        <div class="avatar-actions">
+          <button onclick="chooseAvatar()">Choose image</button>
+          <p>Or choose one of our defaults</p>
+        </div>
+      </div>
+      <h2>Add your location</h2>
+      <input type="text" id="location" placeholder="Enter a location" value="San Francisco">
+      <div class="button-container">
+        <button onclick="navigateToPage4()">Next</button>
+        <button>or Press RETURN</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- Page 4 -->
+  <div id="page4" class="page hidden">
+    <header>
+      <img src="dribble_logo.png" alt="Dribbble Logo">
+    </header>
+    <main>
+      <h1>Welcome! Let's create your profile</h1>
+      <p>Let others get to know you better! You can do these later</p>
+      <h2>Add an avatar</h2>
+      <div class="avatar-container">
+        <div class="avatar-preview"></div>
+        <div class="avatar-actions">
+          <button onclick="chooseAvatar()">Choose image</button>
+          <p>Or choose one of our defaults</p>
+        </div>
+      </div>
+      <h2>Add your location</h2>
+      <input type="text" id="location" placeholder="Enter a location">
+      <div class="button-container">
+        <button onclick="navigateToPage5()">Next</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- Page 5 -->
+  <div id="page5" class="page hidden">
+    <div class="container">
+      <div class="left-section">
+        <img src="illustration.png" alt="Illustration">
+        <p>Discover the world's top Designers & Creatives.</p>
+        <p>Art by Peter Tarka</p>
+      </div>
+      <div class="right-section">
+        <h1>Sign up to Dribbble</h1>
+        <p>Username has already been taken</p>
+        <form onsubmit="createAccount(event)">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="John" value="John">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="John" value="John">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="account@refero.design" value="account@refero.design">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="6+ characters" value="">
+          <div class="checkbox-container">
+            <input type="checkbox" id="terms-checkbox">
+            <label for="terms-checkbox">Creating an account means you're okay with our Terms of Service, Privacy Policy, and our default Notification Settings.</label>
+          </div>
+          <button type="submit">Create Account</button>
+        </form>
+        <p>This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
